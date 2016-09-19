@@ -1,9 +1,9 @@
 <?php
-/**                                                                      
+/**
  * Confirms that the activation key that is sent in an email after a user signs
  * up for a new site matches the key for that user and then displays confirmation.
  *
- * @package WordPress       
+ * @package WordPress
  */
 
 define( 'WP_INSTALLING', true );
@@ -17,7 +17,7 @@ if ( !is_multisite() ) {
 	wp_redirect( wp_registration_url() );
 	die();
 }
-    
+
 if ( is_object( $wp_object_cache ) )
 	$wp_object_cache->cache_enabled = false;
 
